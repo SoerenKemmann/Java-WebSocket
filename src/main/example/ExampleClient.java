@@ -50,7 +50,7 @@ public class ExampleClient extends WebSocketClient {
 
   @Override
   public void onOpen(ServerHandshake handshakedata) {
-    send("Hello, it is me. Mario :)");
+    send("6");
     System.out.println("opened connection");
     // if you plan to refuse connection based on ip or httpfields overload: onWebsocketHandshakeReceivedAsClient
   }
@@ -76,7 +76,7 @@ public class ExampleClient extends WebSocketClient {
 
   public static void main(String[] args) throws URISyntaxException {
     ExampleClient c = new ExampleClient(new URI(
-        "ws://localhost:8887")); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
+        "ws://172.28.40.138:8080/")); // more about drafts here: http://github.com/TooTallNate/Java-WebSocket/wiki/Drafts
     c.connect();
   }
 
